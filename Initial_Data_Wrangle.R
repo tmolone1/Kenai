@@ -1,18 +1,21 @@
 library(tidyverse)
 library(readxl)
 library(rgdal)
-path<-"M:/StoV/Tesoro/ProjectDocuments/KenaiRefinery/RCRA_Permit/QuarterlyMon/Reports/202101_Q21-1/SI_Appendix/SI_MassFlux.xlsx"
-colnames<-read_excel(path,
-                 sheet=1,
-                 range="A2:U2",
-                 col_names = FALSE)
-xcel<-read_excel(path,
-                 sheet=1,
-                 range="A4:U15",
-                 col_names = as.character(colnames))
-xcel<-xcel %>% filter(!grepl("Transect", Well)) %>% mutate (transect=(c(rep("A",3),rep("B",4),rep("C",3))))
+# path<-"M:/StoV/Tesoro/ProjectDocuments/KenaiRefinery/RCRA_Permit/QuarterlyMon/Reports/202101_Q21-1/SI_Appendix/SI_MassFlux.xlsx"
+# colnames<-read_excel(path,
+#                  sheet=1,
+#                  range="A2:U2",
+#                  col_names = FALSE)
+# xcel<-read_excel(path,
+#                  sheet=1,
+#                  range="A4:U15",
+#                  col_names = as.character(colnames))
+# xcel<-xcel %>% filter(!grepl("Transect", Well)) %>% mutate (transect=(c(rep("A",3),rep("B",4),rep("C",3))))
+# save(xcel, file="xcel.Rda")
+load('xcel.Rda')
 
-fgdb<-"M:/StoV/Tesoro/GIS/Projects/TesoroKenai/Mapping/QuarterlyReports/202102_Q21-1/SI_MassFlux_Data.gdb"
+#fgdb<-"M:/StoV/Tesoro/GIS/Projects/TesoroKenai/Mapping/QuarterlyReports/202102_Q21-1/SI_MassFlux_Data.gdb"
+fgdb<-'SI_MassFlux_Data.gdb'
 #subset(ogrDrivers(), grepl("GDB", name))
 #fc_list <- ogrListLayers(fgdb)
 #print(fc_list)

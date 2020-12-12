@@ -45,15 +45,72 @@ explanation <- "TCE Mass Flux (grams/day)"
 PlotCrossSection(transect, rs, 
                  geo.lays = c("r1", "r2"),
                  val.lays = "r3", 
+                 wt.lay = "r1",
                  #pal = palette(rainbow(3)),
                  ylab = "Elevation", 
                  asp = 3,
                  unit = unit, 
+                 breaks = seq(0.01,0.16,0.01),
+                 explanation = explanation,
+                 features = new_pts, 
+                 max.feature.dist = 150,
+                 ylim = c(70, 150),
+                 bg.col = "#E1E1E1", 
+                 wt.col = "#2297E6",
+                 bend.label = "BEND IN\nSECTION",
+                 scale.loc = NULL,
+                 id=c("A","A'"))
+
+#transect B 
+xy<-fc@lines[[2]]@Lines[[1]]  # change the first 1 in brackets to 2 for transect B, 3 for transect C
+transect <- sp::Lines(list(sp::Line(xy)), ID = "Transect")
+transect <- sp::SpatialLines(list(transect),
+                             proj4string = raster::crs(rs))
+
+unit <- "FEET"
+explanation <- "TCE Mass Flux (grams/day)"
+PlotCrossSection(transect, rs, 
+                 geo.lays = c("r1", "r2"),
+                 val.lays = "r3", 
+                 wt.lay = "r1",
+                 #pal = palette(rainbow(3)),
+                 ylab = "Elevation", 
+                 asp = 3,
+                 unit = unit, 
+                 breaks = seq(0.01,0.16,0.01),
+                 explanation = explanation,
+                 features = new_pts, 
+                 max.feature.dist = 80,
+                 ylim = c(70, 150),
+                 bg.col = "#E1E1E1", 
+                 wt.col = "#2297E6",
+                 bend.label = "BEND IN\nSECTION",
+                 scale.loc = NULL,
+                 id=c("B","B'"))
+
+#transect C 
+xy<-fc@lines[[3]]@Lines[[1]]  # change the first 1 in brackets to 2 for transect B, 3 for transect C
+transect <- sp::Lines(list(sp::Line(xy)), ID = "Transect")
+transect <- sp::SpatialLines(list(transect),
+                             proj4string = raster::crs(rs))
+
+unit <- "FEET"
+explanation <- "TCE Mass Flux (grams/day)"
+PlotCrossSection(transect, rs, 
+                 geo.lays = c("r1", "r2"),
+                 val.lays = "r3", 
+                 wt.lay = "r1",
+                 #pal = palette(rainbow(3)),
+                 ylab = "Elevation", 
+                 asp = 3,
+                 unit = unit, 
+                 breaks = seq(0.01,0.16,0.01),
                  explanation = explanation,
                  features = new_pts, 
                  max.feature.dist = 130,
                  ylim = c(70, 150),
                  bg.col = "#E1E1E1", 
+                 wt.col = "#2297E6",
                  bend.label = "BEND IN\nSECTION",
                  scale.loc = NULL,
                  id=c("C","C'"))
