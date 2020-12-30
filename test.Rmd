@@ -1,0 +1,36 @@
+---
+title: '`r paste0(constituent," ",year)`'
+output: 
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3
+    fig_caption: true
+fontsize: 11pt
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Transect A
+
+```{r transa, out.width = "100%"}
+knitr::include_graphics("images/TransectA.png")
+
+```
+
+# Transect B
+
+
+```{r transb, out.width = "100%"}
+knitr::include_graphics("images/TransectB.png")
+```
+
+# Transect C
+
+
+```{r transc, out.width = "100%"}
+knitr::include_graphics("images/TransectC.png")
+```
