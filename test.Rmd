@@ -6,6 +6,7 @@ output:
     fig_height: 3
     fig_caption: true
 fontsize: 11pt
+classoption: a3paper
 geometry: margin=1in
 ---
 
@@ -16,21 +17,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Transect A
 
-```{r transa, out.width = "100%"}
-knitr::include_graphics("images/TransectA.png")
+```{r transa, out.width = "40%"}
+knitr::include_graphics(paste0("images/",constituent," ",year,"TransectA.png"))
 
 ```
 
 # Transect B
 
 
-```{r transb, out.width = "100%"}
-knitr::include_graphics("images/TransectB.png")
+```{r transb, out.width = "40%"}
+knitr::include_graphics(paste0("images/",constituent," ",year,"TransectB.png"))
 ```
 
 # Transect C
 
 
-```{r transc, out.width = "100%"}
-knitr::include_graphics("images/TransectC.png")
+```{r transc, out.width = "40%"}
+knitr::include_graphics(paste0("images/",constituent," ",year,"TransectC.png"))
 ```

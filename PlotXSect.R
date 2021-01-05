@@ -4,25 +4,36 @@ library(inlmisc)
 library(plotKML)
 library(grDevices)
 library(tidyverse)
+years<-c(2015,2017,2020)
+constituents<-c("TCE Mass Flux","TCE and Daughter Products Molar Flux","Benzene Mass Flux")
+explanations<-c("TCE Mass Flux (g/d)","TCE and Daughters Molar Flux (mole/day)","Benzene Mass Flux (g/d)")
 
+for(i in years) {
+  for(j in 1:3) {
 #change all these to change the plots
-year<-2015 # any of the following:   2020    2017     2015
-constituent<-"TCE and Daughter Products Molar Flux"   # any of the following: "TCE Mass Flux"   "TCE and Daughter Products Molar Flux"   "Benzene Mass Flux"
-explanation <- "TCE and Daughters Molar Flux (mole/day)"  # any of the following: "TCE Mass Flux (g/d)"  "TCE and Daughters Molar Flux (mole/day)"  "Benzene Mass Flux (g/d)"
+year<-i # any of the following:   2020    2017     2015
+constituent<-constituents[j]   # any of the following: "TCE Mass Flux"   "TCE and Daughter Products Molar Flux"   "Benzene Mass Flux"
+explanation <- explanations[j]  # any of the following: "TCE Mass Flux (g/d)"  "TCE and Daughters Molar Flux (mole/day)"  "Benzene Mass Flux (g/d)"
+
 
 #dont mess with these
 yearmin=paste0(year,"-01-01")
-yearmmax=paste0(year,"-12-31")
+yearmax=paste0(year,"-12-31")
 dat1<- tibble(new_pts@data)
-dat1<- dat1 %>% filter(`Sample Date` >= yearmin, `Sample Date` <= yearmmax) %>% dplyr::select(Well, constituent, coords.x1, coords.x2)
+dat1<- dat1 %>% filter(`Sample Date` >= yearmin, `Sample Date` <= yearmax) %>% dplyr::select(Well, constituent, coords.x1, coords.x2)
+const_rng <- tibble(new_pts@data) %>% dplyr::select(constituent) %>% range()
+x<-as.numeric(new_pts$coords.x1)
+y<-as.numeric(new_pts$coords.x2)
+z<-as.numeric(new_pts$MPElev)
+buff<-100
+coords<-CRS("+init=EPSG:26934")
+grd<-mygrid(x,y,z,buff,coords)
+feats<-new_pts[new_pts$`Sample Date` >= yearmin & new_pts$`Sample Date` <= yearmax,]
 
 #flux raster
 x<-as.numeric(dat1$coords.x1)
 y<-as.numeric(dat1$coords.x2)
 z<-as.numeric(unlist(dat1 %>% dplyr::select(constituent)))
-buff<-100
-coords<-CRS("+init=EPSG:26934")
-grd<-mygrid(x,y,z,buff,coords)
 r3<-myidw(x,y,z,grd,coords)
 
 # plot(r3)
@@ -55,7 +66,7 @@ xy<-fc@lines[[1]]@Lines[[1]]  # change the first 1 in brackets to 2 for transect
 transect <- sp::Lines(list(sp::Line(xy)), ID = "Transect")
 transect <- sp::SpatialLines(list(transect),
                              proj4string = raster::crs(rs))
-breaks<-seq(floor(r3@data@min),roundUpNice(r3@data@max), roundUpNice((r3@data@max-r3@data@min)/8))
+breaks<-seq(floor(min(const_rng)),roundUpNice(max(const_rng)), roundUpNice((diff(const_rng))/12))
 
 
 
@@ -71,7 +82,7 @@ plot_A <- PlotCrossSection(transect, rs,
                  unit = unit, 
                  breaks = breaks,
                  explanation = explanation,
-                 features = new_pts, 
+                 features = feats, 
                  max.feature.dist = 150,
                  ylim = c(50, 150),
                  #bg.col = "#E1E1E1", 
@@ -79,7 +90,7 @@ plot_A <- PlotCrossSection(transect, rs,
                  bend.label = "BEND IN\nSECTION",
                  scale.loc = NULL,
                  id=c("A","A'"),
-                 file="images/TransectA.png")
+                 file = paste0("images/",constituent," ",year,"TransectA.png"))
 graphics.off()
 
 
@@ -106,7 +117,7 @@ plot_B<- PlotCrossSection(transect, rs,
                  unit = unit, 
                  breaks = breaks,
                  explanation = explanation,
-                 features = new_pts, 
+                 features = feats, 
                  max.feature.dist = 80,
                  ylim = c(50, 150),
                  #bg.col = "#E1E1E1", 
@@ -114,7 +125,7 @@ plot_B<- PlotCrossSection(transect, rs,
                  bend.label = "BEND IN\nSECTION",
                  scale.loc = NULL,
                  id=c("B","B'"),
-                 file = "images/TransectB.png")
+                 file = paste0("images/",constituent," ",year,"TransectB.png"))
 
 graphics.off()
 
@@ -141,7 +152,7 @@ PlotCrossSection(transect, rs,
                  unit = unit, 
                  breaks = breaks,
                  explanation = explanation,
-                 features = new_pts, 
+                 features = feats, 
                  max.feature.dist = 130,
                  ylim = c(50, 150),
                  #bg.col = "#E1E1E1", 
@@ -149,7 +160,7 @@ PlotCrossSection(transect, rs,
                  bend.label = "BEND IN\nSECTION",
                  scale.loc = "bottomright",
                  id=c("C","C'"),
-                 file = "images/TransectC.png")
+                 file = paste0("images/",constituent," ",year,"TransectC.png"))
 graphics.off()
 
 
@@ -181,3 +192,12 @@ rmarkdown::render("test.Rmd", output_file = paste0(constituent," ",year,".pdf"))
 # par(op)
 # ?AddColorKey
 # ?AddColorKey
+  }
+}
+
+  for(j in 1:3) {
+    constituent<-constituents[j]   # any of the following: "TCE Mass Flux"   "TCE and Daughter Products Molar Flux"   "Benzene Mass Flux"
+
+    rmarkdown::render("test2.Rmd", output_file = paste0(constituent,".pdf"))
+    
+  }

@@ -1,0 +1,44 @@
+---
+title: '`r paste0(constituent)`'
+output: 
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3
+    fig_caption: true
+fontsize: 11pt
+classoption: a3paper
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+#                     2015                                     2017                                       2020  
+
+## Transect A
+
+```{r transa, out.width = "33%"}
+knitr::include_graphics(paste0("images/",constituent," 2015","TransectA.png"))
+knitr::include_graphics(paste0("images/",constituent," 2017","TransectA.png"))
+knitr::include_graphics(paste0("images/",constituent," 2020","TransectA.png"))
+
+```
+
+## Transect B
+
+
+```{r transb, out.width = "33%"}
+knitr::include_graphics(paste0("images/",constituent," 2015","TransectB.png"))
+knitr::include_graphics(paste0("images/",constituent," 2017","TransectB.png"))
+knitr::include_graphics(paste0("images/",constituent," 2020","TransectB.png"))
+```
+
+## Transect C
+
+
+```{r transc, out.width = "33%"}
+knitr::include_graphics(paste0("images/",constituent," 2015","TransectC.png"))
+knitr::include_graphics(paste0("images/",constituent," 2017","TransectC.png"))
+knitr::include_graphics(paste0("images/",constituent," 2020","TransectC.png"))
+```
