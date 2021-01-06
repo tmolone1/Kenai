@@ -1,5 +1,5 @@
 ---
-title: '`r paste0(constituent," ",year)`'
+title: '`r paste0(titles[j]," ",year)`'
 output: 
   pdf_document:
     fig_width: 3.5

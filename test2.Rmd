@@ -1,5 +1,5 @@
 ---
-title: '`r paste0(constituent)`'
+title: '`r paste0(titles[j])`'
 output: 
   pdf_document:
     fig_width: 3.5

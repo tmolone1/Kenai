@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.5)  5 JAN 2021 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.5)  6 JAN 2021 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Benzene Mass Flux 2017.tex"
-(./Benzene Mass Flux 2017.tex
+**"Benzene Molar Flux 2017.tex"
+(./Benzene Molar Flux 2017.tex
 LaTeX2e <2020-10-01> patch level 3
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cl
@@ -406,8 +406,8 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [a3paper].
 
-(./Benzene Mass Flux 2017.aux)
-\openout1 = `"Benzene Mass Flux 2017.aux"'.
+(./Benzene Molar Flux 2017.aux)
+\openout1 = `"Benzene Molar Flux 2017.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -458,9 +458,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
-(./Benzene Mass Flux 2017.out) (./Benzene Mass Flux 2017.out)
+(./Benzene Molar Flux 2017.out) (./Benzene Molar Flux 2017.out)
 \@outlinefile=\write3
-\openout3 = `"Benzene Mass Flux 2017.out"'.
+\openout3 = `"Benzene Molar Flux 2017.out"'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -559,25 +559,25 @@ put line 83.
 {c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
 ftex.map} <./images/Benzene Mass Flux 2017TransectA.png> <./images/Benzene Mass
  Flux 2017TransectB.png> <./images/Benzene Mass Flux 2017TransectC.png>] (./Ben
-zene Mass Flux 2017.aux)
-Package rerunfilecheck Info: File `"Benzene Mass Flux 2017".out' has not change
-d.
+zene Molar Flux 2017.aux)
+Package rerunfilecheck Info: File `"Benzene Molar Flux 2017".out' has not chang
+ed.
 (rerunfilecheck)             Checksum: F52A6A4BEF8FF1F660A7DC9CBEE0F561;291.
  ) 
 Here is how much of TeX's memory you used:
  10387 strings out of 481258
- 151163 string characters out of 5913987
- 431927 words of memory out of 5000000
+ 151178 string characters out of 5913987
+ 431938 words of memory out of 5000000
  27153 multiletter control sequences out of 15000+600000
  430991 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,5n,70p,258b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,5n,70p,259b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-e
 c.enc}<c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmbx12.pfb><c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
 /public/lm/lmr10.pfb><c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmr17.pfb>
-Output written on "Benzene Mass Flux 2017.pdf" (1 page, 75119 bytes).
+Output written on "Benzene Molar Flux 2017.pdf" (1 page, 76787 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

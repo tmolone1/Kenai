@@ -6,14 +6,16 @@ library(grDevices)
 library(tidyverse)
 years<-c(2015,2017,2020)
 constituents<-c("TCE Mass Flux","TCE and Daughter Products Molar Flux","Benzene Mass Flux")
-explanations<-c("TCE Mass Flux (g/d)","TCE and Daughters Molar Flux (mole/day)","Benzene Mass Flux (g/d)")
-
+explanations<-c("TCE Molar Flux (mole/day)","TCE and Daughters Molar Flux (mole/d)","Benzene Molar Flux (mol/d)")
+mol_wgts<-c(131,1,78) # the TCE and Daughter products flux is already reported on a molar basis, hence the "1"
+titles<-c("TCE Molar Flux","TCE and Daughter Products Molar Flux","Benzene Molar Flux")
+  
 for(i in years) {
   for(j in 1:3) {
 #change all these to change the plots
 year<-i # any of the following:   2020    2017     2015
 constituent<-constituents[j]   # any of the following: "TCE Mass Flux"   "TCE and Daughter Products Molar Flux"   "Benzene Mass Flux"
-explanation <- explanations[j]  # any of the following: "TCE Mass Flux (g/d)"  "TCE and Daughters Molar Flux (mole/day)"  "Benzene Mass Flux (g/d)"
+explanation <- explanations[j]  # any of the following: "TCE Molar Flux (g/d)"  "TCE and Daughters Molar Flux (mole/day)"  "Benzene Mass Flux (g/d)"
 
 
 #dont mess with these
@@ -35,6 +37,8 @@ x<-as.numeric(dat1$coords.x1)
 y<-as.numeric(dat1$coords.x2)
 z<-as.numeric(unlist(dat1 %>% dplyr::select(constituent)))
 r3<-myidw(x,y,z,grd,coords)
+r3<-r3/mol_wgts[j] # convert to mole/day
+const_rng<-(const_rng/mol_wgts[j]) # convert to mole/day
 
 # plot(r3)
 # lines(fc)
@@ -166,7 +170,7 @@ graphics.off()
 
 
 # rmarkdown::render("test.Rmd", output_file = "Benzene2020.pdf")
-rmarkdown::render("test.Rmd", output_file = paste0(constituent," ",year,".pdf"))
+rmarkdown::render("test.Rmd", output_file = paste0(titles[j]," ",year,".pdf"))
 # rmarkdown::render("test.Rmd", output_file = "Benzene2015.pdf")
 
 # 
@@ -198,6 +202,6 @@ rmarkdown::render("test.Rmd", output_file = paste0(constituent," ",year,".pdf"))
   for(j in 1:3) {
     constituent<-constituents[j]   # any of the following: "TCE Mass Flux"   "TCE and Daughter Products Molar Flux"   "Benzene Mass Flux"
 
-    rmarkdown::render("test2.Rmd", output_file = paste0(constituent,".pdf"))
+    rmarkdown::render("test2.Rmd", output_file = paste0(titles[j],".pdf"))
     
   }

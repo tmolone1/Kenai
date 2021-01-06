@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.5)  5 JAN 2021 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.5)  6 JAN 2021 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Benzene Mass Flux.tex"
-(./Benzene Mass Flux.tex
+**"TCE Molar Flux.tex"
+(./TCE Molar Flux.tex
 LaTeX2e <2020-10-01> patch level 3
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cl
@@ -406,8 +406,8 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [a3paper].
 
-(./Benzene Mass Flux.aux)
-\openout1 = `"Benzene Mass Flux.aux"'.
+(./TCE Molar Flux.aux)
+\openout1 = `"TCE Molar Flux.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -458,9 +458,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
-(./Benzene Mass Flux.out) (./Benzene Mass Flux.out)
+(./TCE Molar Flux.out) (./TCE Molar Flux.out)
 \@outlinefile=\write3
-\openout3 = `"Benzene Mass Flux.out"'.
+\openout3 = `"TCE Molar Flux.out"'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -536,86 +536,86 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/Benzene Mass Flux 2015TransectA.png, id=20, 517.4532pt x 445.1832pt>
-File: images/Benzene Mass Flux 2015TransectA.png Graphic file (type png)
-<use images/Benzene Mass Flux 2015TransectA.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2015TransectA.png  used on in
-put line 76.
+<images/TCE Mass Flux 2015TransectA.png, id=20, 517.4532pt x 445.1832pt>
+File: images/TCE Mass Flux 2015TransectA.png Graphic file (type png)
+<use images/TCE Mass Flux 2015TransectA.png>
+Package pdftex.def Info: images/TCE Mass Flux 2015TransectA.png  used on input 
+line 76.
 (pdftex.def)             Requested size: 231.17pt x 198.88368pt.
-<images/Benzene Mass Flux 2017TransectA.png, id=21, 517.4532pt x 445.1832pt>
-File: images/Benzene Mass Flux 2017TransectA.png Graphic file (type png)
-<use images/Benzene Mass Flux 2017TransectA.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2017TransectA.png  used on in
-put line 77.
+<images/TCE Mass Flux 2017TransectA.png, id=21, 517.4532pt x 445.1832pt>
+File: images/TCE Mass Flux 2017TransectA.png Graphic file (type png)
+<use images/TCE Mass Flux 2017TransectA.png>
+Package pdftex.def Info: images/TCE Mass Flux 2017TransectA.png  used on input 
+line 77.
 (pdftex.def)             Requested size: 231.17pt x 198.88368pt.
-<images/Benzene Mass Flux 2020TransectA.png, id=22, 517.4532pt x 445.1832pt>
-File: images/Benzene Mass Flux 2020TransectA.png Graphic file (type png)
-<use images/Benzene Mass Flux 2020TransectA.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2020TransectA.png  used on in
-put line 78.
+<images/TCE Mass Flux 2020TransectA.png, id=22, 517.4532pt x 445.1832pt>
+File: images/TCE Mass Flux 2020TransectA.png Graphic file (type png)
+<use images/TCE Mass Flux 2020TransectA.png>
+Package pdftex.def Info: images/TCE Mass Flux 2020TransectA.png  used on input 
+line 78.
 (pdftex.def)             Requested size: 231.17pt x 198.88368pt.
-<images/Benzene Mass Flux 2015TransectB.png, id=23, 517.4532pt x 445.9059pt>
-File: images/Benzene Mass Flux 2015TransectB.png Graphic file (type png)
-<use images/Benzene Mass Flux 2015TransectB.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2015TransectB.png  used on in
-put line 83.
+<images/TCE Mass Flux 2015TransectB.png, id=23, 517.4532pt x 445.9059pt>
+File: images/TCE Mass Flux 2015TransectB.png Graphic file (type png)
+<use images/TCE Mass Flux 2015TransectB.png>
+Package pdftex.def Info: images/TCE Mass Flux 2015TransectB.png  used on input 
+line 83.
 (pdftex.def)             Requested size: 231.17pt x 199.20656pt.
-<images/Benzene Mass Flux 2017TransectB.png, id=24, 517.4532pt x 445.9059pt>
-File: images/Benzene Mass Flux 2017TransectB.png Graphic file (type png)
-<use images/Benzene Mass Flux 2017TransectB.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2017TransectB.png  used on in
-put line 84.
+<images/TCE Mass Flux 2017TransectB.png, id=24, 517.4532pt x 445.9059pt>
+File: images/TCE Mass Flux 2017TransectB.png Graphic file (type png)
+<use images/TCE Mass Flux 2017TransectB.png>
+Package pdftex.def Info: images/TCE Mass Flux 2017TransectB.png  used on input 
+line 84.
 (pdftex.def)             Requested size: 231.17pt x 199.20656pt.
-<images/Benzene Mass Flux 2020TransectB.png, id=25, 517.4532pt x 445.9059pt>
-File: images/Benzene Mass Flux 2020TransectB.png Graphic file (type png)
-<use images/Benzene Mass Flux 2020TransectB.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2020TransectB.png  used on in
-put line 85.
+<images/TCE Mass Flux 2020TransectB.png, id=25, 517.4532pt x 445.9059pt>
+File: images/TCE Mass Flux 2020TransectB.png Graphic file (type png)
+<use images/TCE Mass Flux 2020TransectB.png>
+Package pdftex.def Info: images/TCE Mass Flux 2020TransectB.png  used on input 
+line 85.
 (pdftex.def)             Requested size: 231.17pt x 199.20656pt.
-<images/Benzene Mass Flux 2015TransectC.png, id=26, 517.4532pt x 447.3513pt>
-File: images/Benzene Mass Flux 2015TransectC.png Graphic file (type png)
-<use images/Benzene Mass Flux 2015TransectC.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2015TransectC.png  used on in
-put line 90.
+<images/TCE Mass Flux 2015TransectC.png, id=26, 517.4532pt x 447.3513pt>
+File: images/TCE Mass Flux 2015TransectC.png Graphic file (type png)
+<use images/TCE Mass Flux 2015TransectC.png>
+Package pdftex.def Info: images/TCE Mass Flux 2015TransectC.png  used on input 
+line 90.
 (pdftex.def)             Requested size: 231.17pt x 199.85228pt.
-<images/Benzene Mass Flux 2017TransectC.png, id=27, 517.4532pt x 447.3513pt>
-File: images/Benzene Mass Flux 2017TransectC.png Graphic file (type png)
-<use images/Benzene Mass Flux 2017TransectC.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2017TransectC.png  used on in
-put line 91.
+<images/TCE Mass Flux 2017TransectC.png, id=27, 517.4532pt x 447.3513pt>
+File: images/TCE Mass Flux 2017TransectC.png Graphic file (type png)
+<use images/TCE Mass Flux 2017TransectC.png>
+Package pdftex.def Info: images/TCE Mass Flux 2017TransectC.png  used on input 
+line 91.
 (pdftex.def)             Requested size: 231.17pt x 199.85228pt.
-<images/Benzene Mass Flux 2020TransectC.png, id=28, 517.4532pt x 447.3513pt>
-File: images/Benzene Mass Flux 2020TransectC.png Graphic file (type png)
-<use images/Benzene Mass Flux 2020TransectC.png>
-Package pdftex.def Info: images/Benzene Mass Flux 2020TransectC.png  used on in
-put line 92.
+<images/TCE Mass Flux 2020TransectC.png, id=28, 517.4532pt x 447.3513pt>
+File: images/TCE Mass Flux 2020TransectC.png Graphic file (type png)
+<use images/TCE Mass Flux 2020TransectC.png>
+Package pdftex.def Info: images/TCE Mass Flux 2020TransectC.png  used on input 
+line 92.
 (pdftex.def)             Requested size: 231.17pt x 199.85228pt.
 [1
 
 {c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
-ftex.map} <./images/Benzene Mass Flux 2015TransectA.png> <./images/Benzene Mass
- Flux 2017TransectA.png> <./images/Benzene Mass Flux 2020TransectA.png> <./imag
-es/Benzene Mass Flux 2015TransectB.png> <./images/Benzene Mass Flux 2017Transec
-tB.png> <./images/Benzene Mass Flux 2020TransectB.png> <./images/Benzene Mass F
-lux 2015TransectC.png> <./images/Benzene Mass Flux 2017TransectC.png> <./images
-/Benzene Mass Flux 2020TransectC.png>] (./Benzene Mass Flux.aux)
-Package rerunfilecheck Info: File `"Benzene Mass Flux".out' has not changed.
+ftex.map} <./images/TCE Mass Flux 2015TransectA.png> <./images/TCE Mass Flux 20
+17TransectA.png> <./images/TCE Mass Flux 2020TransectA.png> <./images/TCE Mass 
+Flux 2015TransectB.png> <./images/TCE Mass Flux 2017TransectB.png> <./images/TC
+E Mass Flux 2020TransectB.png> <./images/TCE Mass Flux 2015TransectC.png> <./im
+ages/TCE Mass Flux 2017TransectC.png> <./images/TCE Mass Flux 2020TransectC.png
+>] (./TCE Molar Flux.aux)
+Package rerunfilecheck Info: File `"TCE Molar Flux".out' has not changed.
 (rerunfilecheck)             Checksum: 2A05FC322E6FD72872B6CB51996F93A2;1193.
  ) 
 Here is how much of TeX's memory you used:
  10440 strings out of 481258
- 153216 string characters out of 5913987
- 434004 words of memory out of 5000000
+ 152883 string characters out of 5913987
+ 433971 words of memory out of 5000000
  27198 multiletter control sequences out of 15000+600000
  433989 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,5n,70p,1774b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,5n,70p,1771b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-e
 c.enc}<c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmbx12.pfb><c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
 /public/lm/lmr10.pfb><c:/Users/tmoloney/AppData/Roaming/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmr17.pfb>
-Output written on "Benzene Mass Flux.pdf" (1 page, 102982 bytes).
+Output written on "TCE Molar Flux.pdf" (1 page, 107139 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
